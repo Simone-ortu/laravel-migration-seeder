@@ -13,6 +13,13 @@ class dressesTableSeeder extends Seeder
      */
     public function run(Faker $faker)
     {
-        //
+        for($i = 0; $i < 10; $i++){
+            $newDress = new Dress();
+            $newDress->name = $faker->name();
+            $newDress->color = $faker->colorName();
+            $newDress->taglia = $faker->numberBetween(32, 45);
+
+
+        }
     }
 }
